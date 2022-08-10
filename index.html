@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>Car ecommerce</title>
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+  <!-- MDB -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.3.0/mdb.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+  <!-- Start your project here-->
+  <!-- Navbar -->
+
+  <nav class=" navbar navbar-expand-lg navbar-light bg-light sticky-top">
+    <!-- Container wrapper -->
+    <div class="container">
+      <div class="container-fluid  d-flex align-items-center justify-content-around">
+        <!-- Toggle button -->
+        <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
+          data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <!-- Collapsible wrapper -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <!-- Navbar brand -->
+          <a class="navbar-brand mt-2 mt-lg-0" href="./index.html">
+            <img src="./img/car-ecomerce-logo-removebg-preview.png" alt="MDB Logo" height="30" loading="lazy" />
+          </a>
+          <!-- Left links -->
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="./product.html">Products</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="./news.html">News</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="#">Sell</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="#">Service</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="./aboutus.html">About us</a>
+            </li>
+          </ul>
+          <!-- Left links -->
+        </div>
+        <!-- Collapsible wrapper -->
+
+        <!-- Right elements -->
+        <div class="d-lg-flex align-items-center d-sm-block sm-flex-column">
+          <!-- Icon -->
+          <div class="input-group rounded">
+            <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
+              aria-describedby="search-addon" />
+            <span class="input-group-text border-0" id="search-addon">
+              <i class="fas fa-search"></i>
+            </span>
+          </div>
+          <!-- Button trigger modal -->
+          <div class="me-3 collapse navbar-collapse" id="navbarSupportedContent loginDelete" data-mdb-toggle="modal"
+            data-mdb-target="#exampleModal" style="cursor: pointer;">
+
+            <p class="mt-3">Login</p>
+
+          </div>
+          <div class="me-3 collapse navbar-collapse" id="navbarSupportedContent loginDelete">
+            <a href="./register.html" style="cursor: pointer; color: #3f3f3f;">
+              Register
+            </a>
+          </div>
+
+
+
+          <!-- Avatar -->
+          <div class="dropdown collapse navbar-collapse" id="navbarSupportedContent">
+            <a class="dropdown-toggle d-flex align-items-center hidden-arrow" href="#" id="navbarDropdownMenuAvatar"
+              role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+              <div id="img-default" style="width:25px ;">
+              <img src="./img/image/anonymousAvt.png" class="rounded-circle" height="25"
+                alt="Black and White Portrait of a Man" loading="lazy" />
+              </div>
+            </a>
+
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuAvatar">
+              <li>
+                <a class="dropdown-item" href="./user.html">My profile</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="./mySetting.html">Settings</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" id="logout">Logout</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- Right elements -->
+      </div>
+      <!-- Container wrapper -->
+    </div>
+  </nav>
+
+  <!-- Navbar -->
+
+  <!--Slide-->
+  <div id="carouselExampleCaptions" class="carousel slide" data-mdb-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-mdb-target="#carouselExampleCaptions" data-mdb-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-mdb-target="#carouselExampleCaptions" data-mdb-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-mdb-target="#carouselExampleCaptions" data-mdb-slide-to="2"
+        aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://wallpaperaccess.com/full/6260607.jpg" class="d-block w-100 h-75" alt="Wild Landscape">
+        <div class="carousel-caption d-none d-md-block">
+          <h5 style="font-family: 'Montserrat', sans-serif;">First slide label</h5>
+          <p style="font-family: 'Montserrat', sans-serif;">Nulla vitae elit libero, a pharetra augue mollis interdum.
+          </p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img
+          src="https://autopro8.mediacdn.vn/2021/7/7/lamborghini-aventador-lp-780-4-ultimae-1625658431697690482863.jpg"
+          class="d-block w-100 h-75" alt="Camera">
+        <div class="carousel-caption d-none d-md-block">
+          <h5 style="font-family: 'Montserrat', sans-serif;">Second slide label</h5>
+          <p style="font-family: 'Montserrat', sans-serif;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="https://wallpaperaccess.com/full/2658343.jpg" class="d-block w-100 h-75" alt="Exotic Fruits">
+        <div class="carousel-caption d-none d-md-block">
+          <h5 style="font-family: 'Montserrat', sans-serif;">Third slide label</h5>
+          <p style="font-family: 'Montserrat', sans-serif;">Praesent commodo cursus magna, vel scelerisque nisl
+            consectetur.</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-mdb-target="#carouselExampleCaptions"
+      data-mdb-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-mdb-target="#carouselExampleCaptions"
+      data-mdb-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <!--End_Slide-->
+
+  <div class="Detail" style="width: 100%; ">
+    <div class="container">
+
+      <div class="row">
+        <div class="col-12 mt-3">
+          <h2><i class="fas fa-newspaper me-2"></i>News</h2>
+        </div>
+        <div class="d-md-flex justify-content-between mt-3 d-sm-block">
+
+          <div class="card col-md-4 shadow-0 pe-2 col-sm-12">
+            <img
+              src="https://carwow-uk-wp-3.imgix.net/smart-1-front-white-driving-1.jpg?auto=format&cs=tinysrgb&fit=clip&ixlib=rb-1.1.0&q=60&w=720"
+              class="card-img-top rounded-6" alt="Fissure in Sandstone" />
+            <h5 class="fw-bold mt-2">New Smart #1 EV SUV available to order: price, specs and release date</h5>
+            <p>8th Jul 2022</p>
+          </div>
+
+          <div class="card col-md-4 shadow-0 pe-2 col-sm-12">
+            <img
+              src="https://carwow-uk-wp-3.imgix.net/vw-id-buzz-front-34-yellow-lead-1.png?auto=format&cs=tinysrgb&fit=clip&ixlib=rb-1.1.0&q=60&w=720"
+              class="card-img-top rounded-6" alt="Fissure in Sandstone" />
+            <h5 class="fw-bold mt-2">VW ID Buzz available to order now: price and specs</h5>
+            <p>18th Jul 2022</p>
+          </div>
+
+          <div class="card col-md-4 shadow-0 pe-2 col-sm-12">
+            <img
+              src="https://carwow-uk-wp-3.imgix.net/hyundai-rn22e-concept-front-1.jpg?auto=format&cs=tinysrgb&fit=clip&ixlib=rb-1.1.0&q=60&w=720"
+              class="card-img-top rounded-6" alt="Fissure in Sandstone" />
+            <h5 class="fw-bold mt-2">
+              Hyundai RN22e concept previews future N models: price, specs and release date</h5>
+            <p>18th Jul 2022</p>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12 mt-3">
+          <h2><i class="fas fa-car-side me-2"></i>New Car</h2>
+        </div>
+        <div id="carNew" class="d-flex justify-content-between mt-3">
+          <div class="card col-4 border shadow-0">
+            <img
+              src="https://car-data.carwow.co.uk/image?filter[brand_slug]=lexus&filter[model_review_slug]=lc-convertible-2020&filter[angle]=front"
+              class="card-img-top" alt="Fissure in Sandstone" />
+            <p class="d-flex justify-content-center">Mecedes-AMG GT2021</p><br>
+            <p class="d-flex justify-content-center" style="margin-top: -30px">$800,000</p>
+          </div>
+          <div class="card col-4 border shadow-0">
+            <img
+              src="https://car-data.carwow.co.uk/image?filter[brand_slug]=bmw&filter[model_review_slug]=4-series-convertible-2020&filter[angle]=front"
+              class="card-img-top" alt="Fissure in Sandstone" />
+            <p class="d-flex justify-content-center">Mecedes-AMG GT2021</p><br>
+            <p class="d-flex justify-content-center" style="margin-top: -30px">$800,000</p>
+          </div>
+          <div class="card col-4 border shadow-0">
+            <img
+              src="https://car-data.carwow.co.uk/image?filter[brand_slug]=bmw&filter[model_review_slug]=8-series-convertible-2019&filter[angle]=front"
+              class="card-img-top" alt="Fissure in Sandstone" />
+            <p class="d-flex justify-content-center">Mecedes-AMG GT2021</p><br>
+            <p class="d-flex justify-content-center" style="margin-top: -30px">$800,000</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12 mt-3">
+          <h2><i class="fas fa-car-side me-2"></i> Used Car</h2>
+        </div>
+        <div class="d-flex justify-content-between mt-3">
+
+          <div class="card col-4 border shadow-0">
+            <img
+              src="https://car-data.carwow.co.uk/image?filter[brand_slug]=fiat&filter[model_review_slug]=500C&filter[angle]=front"
+              class="card-img-top" alt="Fissure in Sandstone" />
+            <p class="d-flex justify-content-center">Mecedes-AMG GT2021</p><br>
+            <p class="d-flex justify-content-center" style="margin-top: -30px">$800,000</p>
+          </div>
+
+          <div class="card col-4 border shadow-0">
+            <img
+              src="https://car-data.carwow.co.uk/image?filter[brand_slug]=volkswagen&filter[model_review_slug]=t-roc-cabriolet-2020&filter[angle]=front"
+              class="card-img-top" alt="Fissure in Sandstone" />
+            <p class="d-flex justify-content-center">Mecedes-AMG GT2021</p><br>
+            <p class="d-flex justify-content-center" style="margin-top: -30px">$800,000</p>
+
+          </div>
+
+          <div class="card col-4 border shadow-0">
+
+            <img
+              src="https://car-data.carwow.co.uk/image?filter[brand_slug]=volkswagen&filter[model_review_slug]=t-cross-2019&filter[angle]=front"
+              class="card-img-top" alt="Fissure in Sandstone" />
+            <p class="d-flex justify-content-center">Mecedes-AMG GT2021</p><br>
+            <p class="d-flex justify-content-center" style="margin-top: -30px">$800,000</p>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="container">
+          <div class=" mt-3">
+            <h2><i class="fas fa-tools me-2"></i>Our Policy</h2>
+            <div class="d-lg-flex justify-content-between d-md-block d-sm-block">
+              <div class="col-lg-6 col-md-12 mt-2 h-10 d-inline-block mw-100">
+                <img class=" mw-100 rounded-6 " src="https://wallpaperaccess.com/full/7180270.jpg" alt="">
+              </div>
+              <div class="col-lg-6 col-md-12 ms-3">
+                <p> <br>- Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus reiciendis alias
+                  asperiores molestiae veniam
+                  nihil dolore quaerat libero voluptatibus, officia, ut ea deserunt itaque debitis assumenda, aliquid
+                  rerum officiis
+                  commodi?
+                  </br>
+                  <br> - Nobis perspiciatis consequatur vero aut, placeat praesentium quam eveniet. A amet provident
+                  repudiandae sint quidem molestiae vero dolor cumque fugit aliquid ipsam voluptates distinctio.
+                  Corporis animi laborum</br>
+                  <br>
+                  - Mostrum labore similique ullam, optio quidem quae adipisci iste at molestiae, delectus voluptates
+                  deleniti sint
+                  molestias modi itaque deserunt officiis asperiores aliquam. Vitae nostrum autem animi assumenda!<br>
+                  </br>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      x
+
+
+
+    </div>
+
+
+
+    <!-- Footer -->
+    <footer class="text-center text-lg-start bg-light text-muted">
+      <!-- Section: Social media -->
+      <div class="container">
+        <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+          <!-- Left -->
+          <div class="me-5 d-none d-lg-block">
+            <span>Get connected with us on social networks:</span>
+          </div>
+          <!-- Left -->
+
+          <!-- Right -->
+          <div>
+            <a href="" class="me-4 text-reset">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="" class="me-4 text-reset">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="" class="me-4 text-reset">
+              <i class="fab fa-google"></i>
+            </a>
+            <a href="" class="me-4 text-reset">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="" class="me-4 text-reset">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="" class="me-4 text-reset">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+          <!-- Right -->
+        </section>
+        <!-- Section: Social media -->
+
+        <!-- Section: Links  -->
+        <section class="">
+          <div class="container text-center text-md-start mt-5">
+            <!-- Grid row -->
+            <div class="row mt-3">
+              <!-- Grid column -->
+              <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                <!-- Content -->
+
+                <img class="w-100" src="./img/car-ecomerce-logo-removebg-preview.png" alt="">
+
+              </div>
+              <!-- Grid column -->
+
+              <!-- Grid column -->
+              <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                <!-- Links -->
+                <h6 class="text-uppercase fw-bold mb-4">
+                  Products
+                </h6>
+                <p>
+                  <a href="#!" class="text-reset">New</a>
+                </p>
+                <p>
+                  <a href="#!" class="text-reset">Used</a>
+                </p>
+                <p>
+                  <a href="#!" class="text-reset">Luxury</a>
+                </p>
+
+              </div>
+              <!-- Grid column -->
+
+              <!-- Grid column -->
+              <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                <!-- Links -->
+                <h6 class="text-uppercase fw-bold mb-4">
+                  Service
+                </h6>
+                <p>
+                  <a href="#!" class="text-reset">Sell</a>
+                </p>
+                <p>
+                  <a href="#!" class="text-reset">Reviews</a>
+                </p>
+                <p>
+                  <a href="#!" class="text-reset">Orders</a>
+                </p>
+                <p>
+                  <a href="#!" class="text-reset">Help</a>
+                </p>
+              </div>
+              <!-- Grid column -->
+
+              <!-- Grid column -->
+              <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                <!-- Links -->
+                <h6 class="text-uppercase fw-bold mb-4">
+                  Contact
+                </h6>
+                <p><i class="fas fa-home me-3"></i> Hanoi, Vietnam</p>
+                <p>
+                  <i class="fas fa-envelope me-3"></i>
+                  carecomerce@gmail.com
+                </p>
+                <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
+                <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+              </div>
+              <!-- Grid column -->
+            </div>
+            <!-- Grid row -->
+          </div>
+        </section>
+        <!-- Section: Links  -->
+      </div>
+      <!-- Copyright -->
+      <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+        © 2022 Copyright:
+        <a class="text-reset fw-bold" href="">Car Ecomerce</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">LOGIN</h5>
+                  <button type="button" id="close" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="d-flex justify-content-center mt-4 mb-3" ><i class="fas fa-user-circle fa-2xl"></i></div>
+
+
+              <div class="modal-body">
+                  <form id="formLogin" method="post">
+                      <!-- Email input -->
+                      <div class="form-outline mb-4">
+                          <input type="email" id="form1Example1" class="form-control" />
+                          <label class="form-label" for="form1Example1">Email address</label>
+                      </div>
+
+                      <!-- Password input -->
+                      <div class="form-outline mb-4">
+                          <input type="password" id="form1Example2" class="form-control" />
+                          <label class="form-label" for="form1Example2">Password</label>
+                      </div>
+
+                      <!-- 2 column grid layout for inline styling -->
+                      <div class="row mb-4">
+                          <div class="col d-flex justify-content-center">
+                              <!-- Checkbox -->
+                              <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="" id="form1Example3"
+                                      checked />
+                                  <label class="form-check-label" for="form1Example3"> Remember me </label>
+                              </div>
+                          </div>
+
+                          <div class="col">
+                              <!-- Simple link -->
+                              <a href="#!">Forgot password?</a>
+                          </div>
+
+                      </div>
+
+                      <!-- Submit button -->
+                      <button type="submit" class="btn btn-primary btn-block">Sign in</button>
+                  </form>
+              </div>
+              <div class="modal-footer">
+                  <div class="col d-flex justify-content-center">
+                      <!-- Simple link -->
+                      <a href="#!">You have no account? Register now !</a>
+                  </div>
+              </div>
+
+          </div>
+      </div>
+  </div>
+    <!-- End your project here-->
+
+
+    <!-- MDB -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.3.0/mdb.min.js"></script>
+
+
+</body>
+<script src="homePage.js"></script>
+<script src="login.js"></script>
+<script src="logout.js"></script>
+<script src="setAvtUser.js"></script>
+
+</html>
