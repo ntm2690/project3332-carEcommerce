@@ -10,8 +10,13 @@ form.addEventListener('submit', function (e) {
         return console.log('email cannot be empty')
     }
     if (password == '') {
-        return console.log('password cannot be empty')
-    }
+        return document.getElementById("error-login").innerHTML =
+        `
+        <i class="fas fa-user-circle fa-2xl"></i>
+        <span>
+          <h7 class="d-flex justify-content-center fw-bold mt-4" style="color: red;">Password cannot empty</h7>
+        </span>
+        `    }
 
     fetch('http://localhost:8081/api/auth/sign-in', {
         method: 'POST',
@@ -22,19 +27,29 @@ form.addEventListener('submit', function (e) {
         }),
     })
         .then(function (response) {
-            if(response.status == 200){
-                document.getElementById("close").click();
-            }
             return response.json()
         }).then(function (message) {
             console.log(message)
-            alert(message.message)
             var token = message.token;
             var id = message.id;
             console.log(token)
             localStorage.setItem('token', token)
             localStorage.setItem('id', id)
-            location.reload()
+            if(message.token != undefined){
+                document.getElementById("close").click();
+                location.reload()
+            }else{
+                return document.getElementById("error-login").innerHTML =
+                `
+                <i class="fas fa-user-circle fa-2xl"></i>
+                <span>
+                  <h7 class="d-flex justify-content-center fw-bold mt-4" style="color: red;">Password or email is incorrect</h7>
+                </span>
+                `
+            }
+            // location.reload()
+            // window.location.href="./index.html"
+
         }).catch(error => console.error('Error:', error))
 })
 

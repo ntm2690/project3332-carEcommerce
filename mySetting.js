@@ -51,23 +51,36 @@ form.addEventListener('submit', function (e) {
     var pass = document.getElementById('typeText5').value
     console.log(firstName, lastName, email, phone, pass)
     if (firstName == '') {
-        console.log('First Name cannot be empty')
+        return document.getElementById('error-update').innerHTML = 
+        `
+            <h7 class="d-flex justify-content-center fw-"bold" style="color: red;">first name cannot be empty</h7>
+        `
     }
     if (lastName == '') {
-        console.log('last Name cannot be empty')
-    }
+        return document.getElementById('error-update').innerHTML = 
+        `
+            <h7 class="d-flex justify-content-center fw-"bold" style="color: red;">last name cannot be empty</h7>
+        `    }
     if (email == '') {
-        console.log('email cannot be empty')
-    }
+        return document.getElementById('error-update').innerHTML = 
+        `
+            <h7 class="d-flex justify-content-center fw-"bold" style="color: red;">email cannot be empty</h7>
+        `    }
     if (phone == '') {
-        console.log('phone cannot be empty')
-    }
+        return document.getElementById('error-update').innerHTML = 
+        `
+            <h7 class="d-flex justify-content-center fw-"bold" style="color: red;">phone cannot be empty</h7>
+        `    }
     if (pass == '') {
-        console.log('pass cannot be empty')
-    }
+        return document.getElementById('error-update').innerHTML = 
+        `
+            <h7 class="d-flex justify-content-center fw-"bold" style="color: red;">password cannot be empty</h7>
+        `    }
     if (pass.length < 8) {
-        console.log('pass too weak')
-    }
+        return document.getElementById('error-update').innerHTML = 
+        `
+            <h7 class="d-flex justify-content-center fw-"bold" style="color: red;">password is too weak</h7>
+        `    }
 
 
     fetch(`http://localhost:8081/api/users/update/${id}`, {
@@ -89,9 +102,16 @@ form.addEventListener('submit', function (e) {
             return response.json()
         }).then(function (message) {
             console.log(message.status)
-            if(message.status != "200"){
-                alert("fail to update")
-            }else{alert(message.message)}
+            if(message.status != "OK"){
+                return document.getElementById('error-update').innerHTML = 
+                `
+                    <h7 class="d-flex justify-content-center fw-"bold" style="color: red;">${message.message}</h7>
+                `
+
+            }if(message.status == "OK"){
+            location.reload()
+            window.location.href="./user.html"
+            }
         }).catch(error => console.error('Error:', error))
 })
 

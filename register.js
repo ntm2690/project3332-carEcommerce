@@ -11,25 +11,46 @@ form.addEventListener('submit', function (e) {
     var confirmPass = document.getElementById('form3Example6').value
     console.log(firstName, lastName, email, phone, pass, confirmPass)
     if (firstName == '') {
-        console.log('First Name cannot be empty')
+        return document.getElementById("catch-error").innerHTML = 
+        `
+        <h7 id="catch-error" class="d-flex justify-content-center fw-bold" style="color:red">First Name cannot be empty</h7>
+        `
     }
     if (lastName == '') {
-        console.log('last Name cannot be empty')
+        return document.getElementById("catch-error").innerHTML = 
+        `
+        <h7 class="d-flex justify-content-center fw-bold" style="color:red">Last Name cannot be empty</h7>
+        `
     }
     if (email == '') {
-        console.log('email cannot be empty')
+        return document.getElementById("catch-error").innerHTML = 
+        `
+        <h7 class="d-flex justify-content-center fw-bold" style="color:red">Email cannot be empty</h7>
+        `
     }
     if (phone == '') {
-        console.log('phone cannot be empty')
+        return document.getElementById("catch-error").innerHTML = 
+        `
+        <h7 class="d-flex justify-content-center fw-bold" style="color:red">Phone cannot be empty</h7>
+        `
     }
     if (pass == '') {
-        console.log('pass cannot be empty')
+        return document.getElementById("catch-error").innerHTML = 
+        `
+        <h7 class="d-flex justify-content-center fw-bold" style="color:red">Password cannot be empty</h7>
+        `
     }
     if (pass.length < 8) {
-        console.log('pass too weak')
+        return document.getElementById("catch-error").innerHTML = 
+        `
+        <h7 class="d-flex justify-content-center fw-bold" style="color:red">Password too weak</h7>
+        `
     }
     if (pass !== confirmPass) {
-        console.log('confirm pass does not match')
+        return document.getElementById("catch-error").innerHTML = 
+        `
+        <h7 class="d-flex justify-content-center fw-bold" style="color:red">Password and Confirm Password do not match</h7>
+        `
     }
 
     fetch('http://localhost:8081/api/auth/sign-up', {
@@ -48,8 +69,11 @@ form.addEventListener('submit', function (e) {
             console.log(response)
             return response.json()
         }).then(function (message) {
-            alert(message.message)
+            console.log(message.message)
+            location.reload()
+            window.location.href="./index.html"
         }).catch(error => console.error('Error:', error))
+    
 })
 
 

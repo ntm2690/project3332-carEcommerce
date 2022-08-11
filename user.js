@@ -11,15 +11,9 @@ fetch (`http://localhost:8081/api/users/${id}`,{
 }).then(function(data){
     console.log(data.data.avatar)
 
-    document.getElementById("loginChange").innerHTML = 
-    `
-    <i class="fa-solid fa-bell"></i>
-    `
-    document.getElementById("registerChange").innerHTML = 
-    `
-    <i class="fa-solid fa-comment-dots"></i>
-    `
-    
+    document.getElementById("loginChange").innerHTML = data.data.firstName.charAt(0).toUpperCase()+data.data.firstName.slice(1)
+    document.getElementById("registerChange").innerHTML = ""
+
     document.getElementById("user-name").innerHTML =
     `
     <div id="user-name" class="col-lg-12 d-flex justify-content-center mt-3">
@@ -49,11 +43,11 @@ fetch (`http://localhost:8081/api/users/${id}`,{
             class="d-inline-block rounded-circle d-flex justify-content-center img-thumbnail" style="width: 220px;height:220px" alt="..." />
         </div>
         `
-        document.getElementById("img-default").innerHTML =
+        document.getElementById("img-default").innerHTML = 
         `
         <div id="img-default" style="width:25px ;">
         <img src="./img/image/${data.data.avatar}" class="rounded-circle" height="25"
-          alt="Black and White Portrait of a Man" loading="lazy" />
+          alt="Man" loading="lazy" />
         </div>
         `
     }
